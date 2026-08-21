@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Engineering Team Info</title>
+  <meta name="description" content="Acme Industries Engineering: who we are, what we own, and how to reach us.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230E9594'/%3E%3Cpath d='M32 13 L47 51 H38.6 L35.9 43.4 H28.1 L25.4 51 H17 Z M32 26.4 L29.8 36.6 H34.2 Z' fill='%23FFFFFF'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#org">Skip to the org chart</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <p class="eyebrow">Acme Industries</p>
+      <h1>Engineering Team</h1>
+      <p class="lede">
+        We build and run the software that keeps Acme's products shipping: the customer
+        platform, the internal tools our factories depend on, and the pipelines that move
+        data between them.
+      </p>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <section class="panel" aria-labelledby="what-we-do">
+      <h2 id="what-we-do">What we are responsible for</h2>
+      <ul class="duties">
+        <li><strong>Ship product.</strong> Design, build, and release the Acme customer platform and its mobile clients.</li>
+        <li><strong>Keep it running.</strong> On-call rotation, incident response, and the service level targets we publish each quarter.</li>
+        <li><strong>Own the pipeline.</strong> Source control, automated builds, tests, and deployments for every service we run.</li>
+        <li><strong>Guard the data.</strong> Access control, backups, retention, and the audit trail behind them.</li>
+        <li><strong>Support the business.</strong> Internal tooling for Operations, Finance, and the plant floor.</li>
+      </ul>
+    </section>
+
+    <section id="org" aria-labelledby="org-heading">
+      <div class="section-head">
+        <h2 id="org-heading">Who reports to whom</h2>
+        <p class="hint">Every name links to that person's email. <span class="count" id="count"></span></p>
+      </div>
+
+      <div class="filter" hidden id="filter-wrap">
+        <label for="filter">Find someone</label>
+        <input type="search" id="filter" placeholder="Name, role, or team" autocomplete="off">
+        <p class="no-results" id="no-results" role="status" hidden>No one matches that search.</p>
+      </div>
+
+      <!-- Level 1 -->
+      <div class="level level-top">
+        <article class="card card-exec" data-person>
+          <p class="role">Chief Technology Officer</p>
+          <h3 class="name">Marta Delgado</h3>
+          <a class="email" href="mailto:marta.delgado@acme-industries.com">marta.delgado@acme-industries.com</a>
+        </article>
+      </div>
+
+      <div class="connector" aria-hidden="true"></div>
+
+      <!-- Level 2 -->
+      <div class="level level-top">
+        <article class="card card-lead" data-person>
+          <p class="role">Engineering Lead</p>
+          <h3 class="name">Priya Raghunathan</h3>
+          <a class="email" href="mailto:priya.raghunathan@acme-industries.com">priya.raghunathan@acme-industries.com</a>
+        </article>
+      </div>
+
+      <div class="connector" aria-hidden="true"></div>
+
+      <!-- Level 3 and 4 -->
+      <div class="teams">
+
+        <section class="team" aria-labelledby="team-platform">
+          <h3 class="team-name" id="team-platform">Platform</h3>
+          <article class="card card-teamlead" data-person>
+            <p class="role">Team Lead</p>
+            <h4 class="name">Daniel Okafor</h4>
+            <a class="email" href="mailto:daniel.okafor@acme-industries.com">daniel.okafor@acme-industries.com</a>
+          </article>
+          <ul class="devs">
+            <li class="card" data-person>
+              <p class="role">Software Engineer</p>
+              <h5 class="name">Aisha Karim</h5>
+              <a class="email" href="mailto:aisha.karim@acme-industries.com">aisha.karim@acme-industries.com</a>
+            </li>
+            <li class="card" data-person>
+              <p class="role">Software Engineer</p>
+              <h5 class="name">Tomas Lindqvist</h5>
+              <a class="email" href="mailto:tomas.lindqvist@acme-industries.com">tomas.lindqvist@acme-industries.com</a>
+            </li>
+            <li class="card" data-person>
+              <p class="role">Software Engineer</p>
+              <h5 class="name">Grace Mbeki</h5>
+              <a class="email" href="mailto:grace.mbeki@acme-industries.com">grace.mbeki@acme-industries.com</a>
+            </li>
+            <li class="card" data-person>
+              <p class="role">Software Engineer</p>
+              <h5 class="name">Owen Brady</h5>
+              <a class="email" href="mailto:owen.brady@acme-industries.com">owen.brady@acme-industries.com</a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="team" aria-labelledby="team-product">
+          <h3 class="team-name" id="team-product">Product Apps</h3>
+          <article class="card card-teamlead" data-person>
+            <p class="role">Team Lead</p>
+            <h4 class="name">Sofia Marchetti</h4>
+            <a class="email" href="mailto:sofia.marchetti@acme-industries.com">sofia.marchetti@acme-industries.com</a>
+          </article>
+          <ul class="devs">
+            <li class="card" data-person>
+              <p class="role">Software Engineer</p>
+              <h5 class="name">Ravi Chandra</h5>
+              <a class="email" href="mailto:ravi.chandra@acme-industries.com">ravi.chandra@acme-industries.com</a>
+            </li>
+            <li class="card" data-person>
+              <p class="role">Software Engineer</p>
+              <h5 class="name">Elena Vasquez</h5>
+              <a class="email" href="mailto:elena.vasquez@acme-industries.com">elena.vasquez@acme-industries.com</a>
+            </li>
+            <li class="card" data-person>
+              <p class="role">Software Engineer</p>
+              <h5 class="name">Jonah Feldman</h5>
+              <a class="email" href="mailto:jonah.feldman@acme-industries.com">jonah.feldman@acme-industries.com</a>
+            </li>
+            <li class="card" data-person>
+              <p class="role">Software Engineer</p>
+              <h5 class="name">Mei-Lin Chao</h5>
+              <a class="email" href="mailto:meilin.chao@acme-industries.com">meilin.chao@acme-industries.com</a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="team" aria-labelledby="team-data">
+          <h3 class="team-name" id="team-data">Data &amp; Integrations</h3>
+          <article class="card card-teamlead" data-person>
+            <p class="role">Team Lead</p>
+            <h4 class="name">Kwame Asante</h4>
+            <a class="email" href="mailto:kwame.asante@acme-industries.com">kwame.asante@acme-industries.com</a>
+          </article>
+          <ul class="devs">
+            <li class="card" data-person>
+              <p class="role">Software Engineer</p>
+              <h5 class="name">Nadia Petrova</h5>
+              <a class="email" href="mailto:nadia.petrova@acme-industries.com">nadia.petrova@acme-industries.com</a>
+            </li>
+            <li class="card" data-person>
+              <p class="role">Software Engineer</p>
+              <h5 class="name">Colin Reyes</h5>
+              <a class="email" href="mailto:colin.reyes@acme-industries.com">colin.reyes@acme-industries.com</a>
+            </li>
+            <li class="card" data-person>
+              <p class="role">Software Engineer</p>
+              <h5 class="name">Hannah Whitfield</h5>
+              <a class="email" href="mailto:hannah.whitfield@acme-industries.com">hannah.whitfield@acme-industries.com</a>
+            </li>
+            <li class="card" data-person>
+              <p class="role">Software Engineer</p>
+              <h5 class="name">Ibrahim Nasser</h5>
+              <a class="email" href="mailto:ibrahim.nasser@acme-industries.com">ibrahim.nasser@acme-industries.com</a>
+            </li>
+          </ul>
+        </section>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Acme Industries Engineering. Internal reference page.</p>
+      <p>General inbox: <a href="mailto:engineering@acme-industries.com">engineering@acme-industries.com</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

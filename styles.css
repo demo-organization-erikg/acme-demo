@@ -1,0 +1,316 @@
+/* ==========================================================================
+   Acme Industries - Engineering Team Info
+   Color scheme: "Harbor" - deep navy structure, teal accent, amber highlight.
+   ========================================================================== */
+
+:root {
+  /* Brand palette */
+  --navy:        #10233A;
+  --navy-soft:   #1C3A5E;
+  --teal:        #0E9594;
+  --teal-dark:   #0A6E6D;
+  --amber:       #E08A2E;
+
+  /* Surfaces and text */
+  --bg:          #F4F7F9;
+  --surface:     #FFFFFF;
+  --surface-alt: #EAF1F4;
+  --border:      #D3DFE6;
+  --text:        #16222E;
+  --muted:       #5B6C7A;
+
+  /* Scale */
+  --radius:      10px;
+  --gap:         1rem;
+  --gap-lg:      1.75rem;
+  --shadow:      0 1px 2px rgba(16, 35, 58, .06), 0 4px 12px rgba(16, 35, 58, .07);
+  --maxw:        1120px;
+
+  --font-ui: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-ui);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.wrap {
+  width: 100%;
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 4vw, 2rem);
+}
+
+a { color: var(--teal-dark); }
+a:hover { color: var(--navy); }
+
+:focus-visible {
+  outline: 3px solid var(--amber);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--surface);
+  padding: .6rem 1rem;
+  z-index: 10;
+}
+.skip-link:focus { left: 1rem; top: 1rem; }
+
+/* --------------------------------------------------------------- Header */
+
+.site-header {
+  background: linear-gradient(160deg, var(--navy) 0%, var(--navy-soft) 100%);
+  color: #EAF1F4;
+  padding-block: clamp(2rem, 6vw, 3.5rem);
+}
+
+.eyebrow {
+  margin: 0 0 .35rem;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--amber);
+}
+
+.site-header h1 {
+  margin: 0 0 .6rem;
+  font-size: clamp(1.85rem, 5.5vw, 2.9rem);
+  line-height: 1.15;
+  letter-spacing: -.015em;
+}
+
+.lede {
+  margin: 0;
+  max-width: 60ch;
+  font-size: clamp(1rem, 2.4vw, 1.13rem);
+  color: #C7D6E0;
+}
+
+/* ---------------------------------------------------------------- Main */
+
+main { padding-block: clamp(1.75rem, 5vw, 3rem); }
+
+h2 {
+  font-size: clamp(1.25rem, 3.4vw, 1.55rem);
+  letter-spacing: -.01em;
+  margin: 0 0 .75rem;
+}
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: clamp(1.15rem, 3.5vw, 1.75rem);
+  box-shadow: var(--shadow);
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+}
+
+.duties {
+  margin: 0;
+  padding-left: 1.15rem;
+  display: grid;
+  gap: .55rem;
+}
+.duties li::marker { color: var(--teal); }
+.duties strong { color: var(--navy); }
+
+.section-head { margin-bottom: 1.25rem; }
+.hint {
+  margin: 0;
+  color: var(--muted);
+  font-size: .92rem;
+}
+.count { color: var(--teal-dark); font-weight: 600; white-space: nowrap; }
+
+/* --------------------------------------------------------------- Filter */
+
+.filter {
+  display: grid;
+  gap: .4rem;
+  margin-bottom: clamp(1.25rem, 4vw, 2rem);
+  max-width: 26rem;
+}
+.filter label {
+  font-size: .84rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+.filter input {
+  font: inherit;
+  color: inherit;
+  padding: .6rem .75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  width: 100%;
+}
+.filter input:focus { border-color: var(--teal); }
+.no-results {
+  margin: .25rem 0 0;
+  color: var(--amber);
+  font-weight: 600;
+}
+
+/* ---------------------------------------------------------------- Cards */
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--teal);
+  border-radius: var(--radius);
+  padding: .9rem 1rem;
+  box-shadow: var(--shadow);
+  text-align: left;
+}
+
+.card .role {
+  margin: 0 0 .15rem;
+  font-size: .74rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.card .name {
+  margin: 0 0 .2rem;
+  font-size: 1.05rem;
+  line-height: 1.25;
+  color: var(--navy);
+}
+
+.card .email {
+  display: inline-block;
+  font-size: .85rem;
+  word-break: break-word;
+}
+
+.card-exec { border-top-color: var(--navy); }
+.card-exec .name { font-size: 1.3rem; }
+.card-lead { border-top-color: var(--amber); }
+.card-lead .name { font-size: 1.18rem; }
+.card-teamlead { border-top-color: var(--amber); background: var(--surface-alt); }
+
+/* Address plus copy button on one line, built by script.js */
+.contact {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .5rem;
+}
+.level-top .contact { justify-content: center; }
+
+/* Copy button, added by script.js only when the browser supports it */
+.copy {
+  font: inherit;
+  font-size: .78rem;
+  padding: .15rem .5rem;
+  color: var(--teal-dark);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.copy:hover { background: var(--surface-alt); border-color: var(--teal); }
+.copy[data-done="yes"] { color: var(--navy); border-color: var(--teal); }
+
+/* ------------------------------------------------------------ Org chart */
+
+.level-top {
+  display: flex;
+  justify-content: center;
+}
+.level-top .card {
+  width: 100%;
+  max-width: 26rem;
+  text-align: center;
+}
+
+.connector {
+  width: 2px;
+  height: 1.75rem;
+  margin-inline: auto;
+  background: var(--border);
+}
+
+.teams {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap-lg);
+}
+
+.team {
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: clamp(.9rem, 2.5vw, 1.15rem);
+}
+
+.team-name {
+  margin: 0 0 .75rem;
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--teal-dark);
+}
+
+.devs {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: var(--gap);
+}
+
+/* Hidden by the filter in script.js */
+[data-person][hidden] { display: none; }
+
+/* --------------------------------------------------------------- Footer */
+
+.site-footer {
+  background: var(--navy);
+  color: #C7D6E0;
+  padding-block: 1.5rem;
+  margin-top: clamp(2rem, 6vw, 3.5rem);
+  font-size: .9rem;
+}
+.site-footer p { margin: .2rem 0; }
+.site-footer a { color: #7FD4D3; }
+
+/* ---------------------------------------------------------- Breakpoints */
+
+/* Tablet: one team per row, its four engineers two across.
+   Teams stay full width here on purpose - two teams side by side would
+   squeeze each email address onto three lines. */
+@media (min-width: 40rem) {
+  .devs { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Desktop: all three teams across, devs stacked inside each column */
+@media (min-width: 64rem) {
+  .teams { grid-template-columns: repeat(3, 1fr); }
+  .devs { grid-template-columns: 1fr; }
+}
+
+/* Print: flatten to something that fits a page */
+@media print {
+  .site-header, .site-footer { background: none; color: #000; }
+  .filter, .skip-link { display: none; }
+  .card { box-shadow: none; }
+}
